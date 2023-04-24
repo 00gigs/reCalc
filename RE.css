@@ -1,0 +1,88 @@
+#form{
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    max-width: fit-content;
+    justify-content: center;
+    align-items: center;
+    background-color: hsla(87, 100%, 39%, 1);
+    border-radius: 10%;
+    max-height: fit-content;
+  z-index: -1;
+}
+
+.all{
+    background-color: rgba(160,186,149);
+    font-size: large;
+    font-family: 'Chivo Mono', monospace;
+    color:whitesmoke;
+
+    
+
+}
+
+#submit{
+    border-radius: 10%;
+    box-shadow: 1px 15px 32px 6px rgba(0,0,0,0.68);
+    padding: 10px;
+    margin-top: 40px;
+    background-color: #5150ff;
+    color:whitesmoke;
+    font-family: 'Chivo Mono', monospace;
+    font-size: large;
+    margin-top: 10px;
+    margin-bottom: 25px;
+    line-height: 10px;
+    
+}
+
+#MOA{
+    margin-top: 40px;
+    text-decoration: underline;
+}
+
+#result{
+    border: 3px inset #5150ff ;
+    background-color: black;
+    color: whitesmoke;
+    
+}
+
+.slider{
+    width:100%;
+border: 2px solid silver;
+border-radius: 1em;
+background-color: #5150ff;
+padding: 0 0 1em 0;
+text-align: center;
+z-index: 2;
+}
+/*rehab slider2*/
+.slider .field{
+    align-items: center;
+    justify-content: center;
+}
+.slider .field input{
+    -webkit-appearance: none;
+    height:2px;
+    width: 100%; 
+    background-color: black; 
+ }
+.value{
+    display: flex;
+    justify-content: center;
+    word-spacing: 250px;
+}
+ .tics{
+    display: flex;
+    text-align: center;
+ }
+ .tx{
+    flex: 1;
+    text-align: center;
+    font-weight: 500;
+    flex-basis: 0%;
+    flex-shrink: 1;
+    
+ }
+
