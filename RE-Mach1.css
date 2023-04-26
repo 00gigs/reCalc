@@ -1,0 +1,64 @@
+#form{
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    justify-content: center;
+    align-items: center;
+    background-color: hsla(87, 100%, 39%, 1);
+    border-radius: 10%;
+    max-height: fit-content;
+ z-index: 1;
+  
+}
+
+input{
+    height: 35px;
+    line-height: 20px;
+    margin: 10px 10px;
+    font-size: large;
+}
+
+.all{
+    background-color: rgba(160,186,149);
+    font-size: large;
+    font-family: 'Chivo Mono', monospace;
+    color:whitesmoke;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    
+
+}
+
+#submit{
+    border-radius: 10%;
+    box-shadow: 1px 15px 32px 6px rgba(0,0,0,0.68);
+    padding: 10px;
+    margin-top: 40px;
+    background-color: #5150ff;
+    color:whitesmoke;
+    font-family: 'Chivo Mono', monospace;
+    font-size: large;
+    margin-top: 10px;
+    margin-bottom: 25px;
+    line-height: 10px;
+    
+}
+
+#MOA{
+    margin-top: 40px;
+    text-decoration: underline;
+    font-size: 40px;
+}
+
+
+
+#result{
+    border: 1px inset #5150ff ;
+    background-color: black;
+    color: whitesmoke;
+    
+}

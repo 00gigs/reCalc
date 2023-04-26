@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RE calcualtor</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chivo+Mono:wght@300;400;500&family=Open+Sans:ital,wght@0,300;0,400;1,500&family=Roboto:wght@100;300;400;500;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="re.css">
+</head>
+<body class="all">
+<!--Form-->
+    <form id="form" class="form">
+        <label for="ARV"></label>ARV
+            <input id="ARV" type="number" min="0" required>
+        <label for="sqft"></label>Square Footage Of Home!
+            <input id="sqft" type="number" min="0" required>
+        <label for="WSP"></label>Your Profit
+            <input id="WSP" type="number" min="0" required placeholder="1-3% of ARV">
+        <label for="HC"></label>Holding Cost
+            <input id="HC" type="number" min="0"  placeholder="10% of ARV" >
+         <label for="FP"></label>Flipper's Profit
+            <input id="FP" type="number" min="0"  placeholder="20% of ARV">
+        <label for="RC"></label>Estimated Rehab Cost
+            <input id="RC" type="number" min="0">
+       
+        
+<hr width="100%">
+         <!--Selector-->
+                <section class="selector">
+                    <div class="field">
+                         <h4>Repair Amount</h4>
+                             <select name="" id="Repairs">
+                                <option value="20">light-$20</option>
+                                <option value="40">medium-$40</option>
+                                <option value="60">high-$60</option>
+                                <option value="80">Super-High-$80</option>
+                             </select>
+                    </div>
+                </section>
+                            <!--submit button-->
+                            <hr width="100%">
+            <input type="button" id="submit" value="Calulate" onclick="calc()">
+           <input type="button" id="submit" value="RESET" onclick="reset()">
+    </form>
+<!--Maximum offer allowed -->
+    <Section id="MOA">
+    Maximum Offer Allowed Is 
+    <input type="text" id="MAXOFF" disabled >
+    </Section>
+
+    <script>
+/*Repair value input*/
+function onChange() {
+    var value = Repairs.value;
+}
+Repairs.onchange = onChange;
+onChange();
+/*RESET*/
+function reset(){
+    document.getElementById("ARV").value = null;
+    document.getElementById("WSP").value = null;
+    document.getElementById("sqft").value = null;
+    document.getElementById("MAXOFF").value = 0;
+    
+}
+/* MOA calculations*/
+function calc(){
+  var ARV = Number(document.getElementById("ARV").value);
+  var HC = ARV * .1;
+  var FP = ARV * .2;
+  var rep = Number(document.getElementById("Repairs").value);
+  var sqft = Number(document.getElementById("sqft").value);
+  var RC = sqft * rep;
+  var prft = Number(document.getElementById("WSP").value);
+    var diff = ARV - HC - FP - RC - prft;
+        document.getElementById("MAXOFF").value = String(diff);
+}
+
+    </script>
+</body>
+</html>
